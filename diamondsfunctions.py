@@ -19,6 +19,7 @@ def avgdiamondprice(csv_file ):
     
     return average_value
 
+
 def howmanyideal(csv_file):
      df = pd.read_csv(csv_file)
     
@@ -46,6 +47,7 @@ def median_of_carat():
     median_carat = df['carat'].median()
     return median_carat
 
+#TODO
 
 def avgcarinanycat():
     pass
