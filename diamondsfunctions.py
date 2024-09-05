@@ -19,13 +19,33 @@ def avgdiamondprice(csv_file ):
     
     return average_value
 
-def howmanyideal():
-    pass
+def howmanyideal(csv_file):
+     df = pd.read_csv(csv_file)
+    
+    #בודק כמה פעמים יש איידיאל בתוך השורה קאט
+     count = df[df['cut'] == 'Ideal'].shape[0]
+    
+     return count
 
-def colorsandcount():
-    pass
-def hetsion():
-    pass
+
+   
+
+def diamondcolor():
+    df = pd.read_csv("diamonds.csv")
+    
+    # מכניס לתוך מערך את רשימת הצבעים שקיבלנו
+    unique_colors = df['color'].unique()
+    
+    return unique_colors
+
+def median_of_carat():
+    # קריאת הקובץ לתוך DataFrame
+    df = pd.read_csv("diamonds.csv")
+    
+    # חישוב החציון של ערכי העמודה 'carat'
+    median_carat = df['carat'].median()
+    return median_carat
+
 
 def avgcarinanycat():
     pass
